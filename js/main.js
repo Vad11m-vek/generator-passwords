@@ -1,15 +1,32 @@
 'use strict'
-// DOM elements
-
-
+// listener start
+start.addEventListener('click', event => {
+	let length = long.value;
+	out.value = makeid(length);
+});
+//variables our symbols
+let is_digit = '0123456789',
+	is_special = "!@#$%^&*()~_='`\/|:;",
+	is_ua = 'АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ',
+	is_en = 'ABCDEFGHIJLMNOPQRSTUVWXYZ',
+	$checkBoxs = document.querySelectorAll('input[type=checkbox]'),
+	characters = '';
 function makeid(length) {
-	var result = '';
-	var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-	var charactersLength = characters.length;
-	for (var i = 0; i < length; i++) {
+	let result = ''
+	let charactersLength = checkCheckingBox().length;
+	for (let i = 0; i < length; i++) {
 		result += characters.charAt(Math.floor(Math.random() * charactersLength));
 	}
 	return result;
 }
-
-console.log(makeid(10));
+function checkCheckingBox() {
+	characters = '';
+	if ($checkBoxs[0].checked) characters += is_digit;
+	if ($checkBoxs[1].checked) characters += is_special;
+	if ($checkBoxs[2].checked) characters += is_ua;
+	if ($checkBoxs[3].checked) characters += is_en;
+	if ($checkBoxs[4].checked && $checkBoxs[5].checked) {
+		characters += characters.toLowerCase();	//upper and low 
+	} else if ($checkBoxs[5].checked) characters = characters.toLowerCase(); //lower
+	return characters;
+}
