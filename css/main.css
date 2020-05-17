@@ -1,0 +1,27 @@
+h1 {
+  text-align: center;
+}
+
+.wrapper_page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper_page .left_colum {
+  position: absolute;
+  left: 20%;
+}
+
+.wrapper_page .left_colum > label {
+  display: block;
+}
+
+.wrapper_page .right_colum {
+  position: absolute;
+  right: 20%;
+}
+
+.wrapper_page .right_colum > label {
+  display: block;
+}

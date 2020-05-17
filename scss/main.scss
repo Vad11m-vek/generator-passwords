@@ -1,0 +1,28 @@
+h1{
+	text-align: center;
+}
+.wrapper_page{
+	display: flex;
+
+	.left_colum{
+		position: absolute;
+		left: 20%;
+
+		&>label{
+			display: block;
+		}
+		.wrapper_symbols{
+
+		}
+
+	}
+	.right_colum{
+		position: absolute;
+		right: 20%;
+
+		&>label{
+			display: block;
+		}
+
+	}
+}

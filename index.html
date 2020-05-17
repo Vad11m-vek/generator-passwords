@@ -1,14 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Ua">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-	
-		<h1>Hello World</h1>
 
-		<script src="js/main.js"></script>
+<body>
+
+	<h1>Online generator passwords</h1>
+	<div class="wrapper_page">
+		<div class="left_colum">
+			<label for="long">Long :</label>
+			<input type="number" id="long" value="16">
+			<div class="wrapper_symbols">
+				<div class="wraper_checkbox">
+					<input type="checkbox" id="is_digit" checked>
+					<label for="is_digit"> Digit</label>
+				</div>
+				<div class="wraper_checkbox">
+					<input type="checkbox" id="is_lower" checked>
+					<label for="is_lower"> Lower symbol</label>
+				</div>
+				<div class="wraper_checkbox">
+					<input type="checkbox" id="is_upper" checked>
+					<label for="is_upper">Upper symbol</label>
+				</div>
+				<div class="wraper_checkbox">
+					<input type="checkbox" id="is_special" checked>
+					<label for="is_special">Special symbol</label>
+				</div>
+				<div class="wraper_checkbox">
+					<input type="checkbox" id="is_ua" checked>
+					<label for="is_ua">Ua language</label>
+				</div>
+				<div class="wraper_checkbox">
+					<input type="checkbox" id="is_en" checked>
+					<label for="is_en">En language</label>
+				</div>
+				<div class="wraper_checkbox">
+					<input type="checkbox" id="is_hindi" checked>
+					<label for="is_hindi">Hindi language</label>
+				</div>
+			</div>
+		</div>
+		<div class="right_colum">
+			<input type="button" value="Generate">
+			<label for="out">Result :</label>
+			<input type="text" id="out">
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
 </body>
+
 </html>
