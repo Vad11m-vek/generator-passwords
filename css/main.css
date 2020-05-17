@@ -29,8 +29,8 @@ h1 {
 .wrapper_page .right_colum .hover-copy #copy {
   opacity: 0;
   position: relative;
-  -webkit-transform: translate(-120%);
-          transform: translate(-120%);
+  width: 25px;
+  left: -30px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
