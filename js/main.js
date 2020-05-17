@@ -6,7 +6,7 @@ start.addEventListener('click', event => {
 });
 //variables our symbols
 let is_digit = '0123456789',
-	is_special = "!@#$%^&*()~_='`\/|:;",
+	is_special = "!@#$%^&*()~_='\/|:;",
 	is_ua = 'АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ',
 	is_en = 'ABCDEFGHIJLMNOPQRSTUVWXYZ',
 	$checkBoxs = document.querySelectorAll('input[type=checkbox]'),
