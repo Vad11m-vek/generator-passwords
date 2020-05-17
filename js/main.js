@@ -4,6 +4,13 @@ start.addEventListener('click', event => {
 	let length = long.value;
 	out.value = makeid(length);
 });
+out.addEventListener('click', event => {
+	out.setSelectionRange(0, out.value.length)
+});
+copy.addEventListener('click', event => {
+	document.getElementById("out").select();
+	document.execCommand("copy");
+});
 //variables our symbols
 let is_digit = '0123456789',
 	is_special = "!@#$%^&*()~_='\/|:;",

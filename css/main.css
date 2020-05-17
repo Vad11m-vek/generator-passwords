@@ -25,3 +25,16 @@ h1 {
 .wrapper_page .right_colum > label {
   display: block;
 }
+
+.wrapper_page .right_colum .hover-copy #copy {
+  opacity: 0;
+  position: relative;
+  -webkit-transform: translate(-120%);
+          transform: translate(-120%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.wrapper_page .right_colum .hover-copy:hover #copy {
+  opacity: 1;
+}
