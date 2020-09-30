@@ -16,6 +16,8 @@ let is_digit = '0123456789',
 	is_special = "!@#$%^&*()~_='\/|:;",
 	is_ua = 'АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ',
 	is_en = 'ABCDEFGHIJLMNOPQRSTUVWXYZ',
+	is_pl = 'AĄBCĆDEĘFGHIJKLŁMNŃOÓPQRSŚTUVWXYZŹŻ',
+	is_el = 'ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρστυφχψω',
 	$checkBoxs = document.querySelectorAll('input[type=checkbox]'),
 	characters = '';
 function makeid(length) {
@@ -32,8 +34,10 @@ function checkCheckingBox() {
 	if ($checkBoxs[1].checked) characters += is_special;
 	if ($checkBoxs[2].checked) characters += is_ua;
 	if ($checkBoxs[3].checked) characters += is_en;
-	if ($checkBoxs[4].checked && $checkBoxs[5].checked) {
+	if ($checkBoxs[4].checked) characters += is_pl;
+	if ($checkBoxs[5].checked) characters += is_el;
+	if ($checkBoxs[6].checked && $checkBoxs[7].checked) {
 		characters += characters.toLowerCase();	//upper and low 
-	} else if ($checkBoxs[5].checked) characters = characters.toLowerCase(); //lower
+	} else if ($checkBoxs[7].checked) characters = characters.toLowerCase(); //lower
 	return characters;
 }
