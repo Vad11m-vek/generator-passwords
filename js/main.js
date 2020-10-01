@@ -12,12 +12,12 @@ copy.addEventListener('click', event => {
 	document.execCommand("copy");
 });
 //variables our symbols
-let is_digit = '0123456789',
-	is_special = "!@#$%^&*()~_='\/|:;",
-	is_ua = 'АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ',
-	is_en = 'ABCDEFGHIJLMNOPQRSTUVWXYZ',
-	is_pl = 'AĄBCĆDEĘFGHIJKLŁMNŃOÓPQRSŚTUVWXYZŹŻ',
-	is_el = 'ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρστυφχψω',
+let vocabularyIsDigit = '0123456789',
+	vocabularyIsSpecial = "!@#$%^&*()~_='\/|:;",
+	vocabularyIsUa = 'АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ',
+	vocabularyIsEn = 'ABCDEFGHIJLMNOPQRSTUVWXYZ',
+	vocabularyIsPl = 'AĄBCĆDEĘFGHIJKLŁMNŃOÓPQRSŚTUVWXYZŹŻ',
+	vocabularyIsEl = 'ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρστυφχψω',
 	$checkBoxs = document.querySelectorAll('input[type=checkbox]'),
 	characters = '';
 function makeid(length) {
@@ -30,14 +30,14 @@ function makeid(length) {
 }
 function checkCheckingBox() {
 	characters = '';
-	if ($checkBoxs[0].checked) characters += is_digit;
-	if ($checkBoxs[1].checked) characters += is_special;
-	if ($checkBoxs[2].checked) characters += is_ua;
-	if ($checkBoxs[3].checked) characters += is_en;
-	if ($checkBoxs[4].checked) characters += is_pl;
-	if ($checkBoxs[5].checked) characters += is_el;
-	if ($checkBoxs[6].checked && $checkBoxs[7].checked) {
+	if (is_digit.checked) characters += vocabularyIsDigit;
+	if (is_special.checked) characters += vocabularyIsSpecial;
+	if (is_ua.checked) characters += vocabularyIsUa;
+	if (is_en.checked) characters += vocabularyIsEn;
+	if (is_pl.checked) characters += vocabularyIsPl;
+	if (is_el.checked) characters += vocabularyIsEl;
+	if (is_upper.checked && is_lower.checked) {
 		characters += characters.toLowerCase();	//upper and low 
-	} else if ($checkBoxs[7].checked) characters = characters.toLowerCase(); //lower
+	} else if (is_lower.checked) characters = characters.toLowerCase(); //lower
 	return characters;
 }
